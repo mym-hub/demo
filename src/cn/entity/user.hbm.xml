@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.entity.User" table="user">
+		<id name="UserID" column="UserID">
+			<generator class="native"></generator>
+		</id>
+		<property name="NickName" column="NickName"></property>
+		<property name="avatarUrl" column="avatarUrl"></property>
+		<property name="WxCodeUrl" column="WxCodeUrl"></property>
+		<property name="Address" column="Address"></property>
+		<property name="Phone" column="Phone"></property>
+		<property name="Sex" column="Sex"></property>
+		<property name="WxOpenID" column="WxOpenID"></property>
+		<property name="IsDeleted" column="IsDeleted"></property>
+		<property name="AddTime" column="AddTime"></property>
+		
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql:///test</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">123456</property>
+		
+		<!-- 二、配置hibernate的配置信息 可选的 -->
+		<!-- 输出底层sql语句     1 、显示sql语句  2、sql语句格式化(如创建时断行)-->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<!-- update:如果有表则更新，没有则创建 -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.current_session_context_class">thread</property> 
+		<!-- 配置数据库方言
+			MySQL中用分页limit,而oracle数据库用rownum
+			hibernate识别不同数据库的特有的语句
+		 -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- 三、把映射文件配置到核心文件中 重要 
+			根目录是src-->
+		<mapping resource="cn/entity/user.hbm.xml"/>
+		<mapping resource="cn/entity/ptuser.hbm.xml"/>
+		<mapping resource="cn/entity/baseinfo.hbm.xml"/>
+		<mapping resource="cn/entity/club.hbm.xml"/>
+		<mapping resource="cn/entity/trove.hbm.xml"/>
+		<mapping resource="cn/entity/login.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

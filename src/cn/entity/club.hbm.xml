@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.entity.Club" table="club">
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="cname" column="cname"></property>
+		<property name="minister" column="minister"></property>
+		<property name="depart" column="depart"></property>
+		<property name="pubdata" column="pubdata"></property>
+		<property name="enddata" column="enddata"></property>
+		<property name="test" column="test"></property>
+		<property name="userid" column="userid"></property>
+		<property name="state" column="state"></property>
+		<property name="remark" column="remark"></property>
+		<property name="isdelete" column="isdelete"></property>
+	</class>
+</hibernate-mapping>
